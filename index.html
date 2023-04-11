@@ -1,20 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet">
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Effective
-   Solutions for Business">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet">
+      <!-- intl-tel-input-plugin -->
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+      >
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+      <!-- plugin end -->
+      
+      <link rel="stylesheet" href="/src/css/main-modal.css">
+ 
+    <link rel="stylesheet" href="/src/css/reset.css">
+  </head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+<body>
+    
+<button type="button" data-modal-buy-open class="button">Buy Now</button>
+<button type="button" data-modal-review-open class="button">Leave a review</button>
+ 
+<!-- Modal Buy Now-->
+<div class="backdrop is-hidden" data-modal>
 
-  <link rel="stylesheet" href="/css/main-modal.css">
-  <link rel="stylesheet" href="/css/reset.css">
+<div class="modal modal-buy"> 
+    <button type="button" data-modal-close class="buy-modal-close modal-close"> 
+      <svg class="icon-close" width="20px" height="20px">
+        <use href="/src/images/symbol-defs.svg#icon-x"></use>
+      </svg>
+    </button>
 
-  <title>WebStudio</title>
-</head>
+    <p class="modal-title modal-title-buy"><span class="title-colored">buy</span> now</p>
+
+    <div class="buy-option-container">
+    <ul class="buy-option-list">
+      <li class="card buy-option-item">
+        <div class="buy-option">
+        <img class="buy-option-img"
+            srcset="/src/images/modal-img/dark-chocolate-mob-2x.jpg
+            480w, /src/images/modal-img/dark-chocolate-tab-2x.jpg
+            /src/images/modal-img/dark-chocolate.jpg"
+            sizes="(max-width: 1200px) 1x, 1,5x 2x"
+            src="/src/images/modal-img/dark-chocolate.jpg"
+            alt="Dark Chocolate" >
+        <div class="check-button" id="ck-button">
+          <label class="checkbox">
+             <input class="check-btn" type="checkbox" value="1"><span class="weight">100g</span>
+          </label>
+       </div>
+
+    </li>
+
+     <li class="card buy-option-item">
+      <div class="buy-option">
+        <img class="buy-option-img"
+        srcset="/src/images/modal-img/white-chocolate-mob-2x.jpg
+        480w, /src/images/modal-img/white-chocolate-tab-2x.jpg
+        /src/images/modal-img/white-chocolate.jpg"
+        sizes="(max-width: 1200px) 1x, 1,5x 2x"
+        src="/src/images/modal-img/white-chocolate.jpg"
+        alt="White Chocolate" >
+        <div class="check-button" id="ck-button">
+          <label class="checkbox">
+             <input class="check-btn" type="checkbox" value="2"><span class="weight">200g</span>
+          </label>
+       </div>
+      </div>
+    </li>
+      
+    <li class="card buy-option-item">
+      <div class="buy-option">
+        <img class="buy-option-img"
+        srcset="/src/images/modal-img/milk-chocolate-mob-2x.jpg
+        480w, /src/images/modal-img/milk-chocolate-tab-2x.jpg
+        /src/images/modal-img/milk-chocolate.jpg"
+        sizes="(max-width: 1200px) 1x, 1,5x 2x"
+        src="/src/images/modal-img/milk-chocolate.jpg"
+        alt="Milk Chocolate" >
+        <div class="check-button" id="ck-button">
+          <label class="checkbox">
+             <input class="check-btn" type="checkbox" value="3"><span class="weight">300g</span>
+          </label>
+       </div>
+      </div>
+    </li>
+    </ul>
+    </div>
+
+    <form class="modal-form modal-form-buy form">
+      <span class="modal-frm-inpt-desc modal-frm-name inpt-desc">Personal information</span> 
+     <div class="modal-form-name">
+      <label class="modal-form-field">
+        <span class="modal-form-input-wrapper">
+          <input
+            class="modal-form-input form-input name-form-input"
+            type="text"
+            name="name"
+            id="name"
+            pattern="[a-zA-Zа-яА-Я]+"
+            required
+            minlength="2"
+            placeholder="Name"
+            >
+        </span>
+    </label>
+    <label class="modal-form-field">
+      <span class="modal-form-input-wrapper">
+        <input
+          class="modal-form-input form-input name-form-input"
+          type="text"
+          name="surname"
+          id="name"
+          pattern="[a-zA-Zа-яА-Я]+"
+          minlength="2"
+          placeholder="Surname"
+          required
+          >
+      </span>
+  </label>
+</div>
+  
+<span class="modal-frm-inpt-desc inpt-desc">Email</span>
+  <label class="modal-form-field" for="email">
+    <span class="modal-form-input-wrapper">
+      <input
+        class="modal-form-input form-input review-form-input"
+        type="email"
+        name="email"
+        id="email"
+        pattern="[A-Za-z0-9]"
+        placeholder="Enter your email"
+        required
+      >
+    </span>
+  </label>
+
+  <span class="modal-frm-inpt-desc phone inpt-desc">Phone number</span>     
+  <label class="modal-form-field phone" for="phone">
+       <span class="modal-form-input-wrapper">
+             <input
+             class="modal-form-input form-input review-form-input"
+              type="number"
+              name="phone" 
+              id="phone"
+              placeholder="Phone number"
+              required >
+       </span>
+      </label>
+
+
+      <span class="modal-frm-inpt-desc card-number inpt-desc">Card number</span>  
+      <label class="form-label" for="card-number">
+        <span class="modal-form-input-wrapper"> 
+        <input
+          type="tel"
+          name="credit-number"
+          class="modal-form-input form-input review-form-input"
+          id="card-number"
+          pattern="\d*"
+          maxlength="19"
+          autocomplete="off"
+          placeholder="Enter card"
+          required >
+       <svg class="card-icon" width="32px" height="18px">
+          <use href="/src/images/symbol-defs.svg#icon-mastercard"></use>
+        </svg>
+        </span>
+      </label>
+    
+    </br>
+
+      <span class="modal-frm-inpt-desc inpt-desc">Comment</span>
+      <label class="modal-form-field" for="comment">
+          <textarea 
+            name="comment"
+            id="comment"
+            rows="10"
+            class="modal-form-textarea form-input review-form-input"
+            placeholder="Enter text"></textarea>
+          </label>
+      
+        <button type="submit" class="form-button button submit-btn">Submit</button>
+
+        <!-- <button class="modal-form-btn" type="submit">Send</button> -->
+      </form>
+    </div>
+
+</div>
+
+    
+    <!--Modal Leave a Review-->
+    <div class="backdrop is-hidden" data-modal>
+
+        <div class="modal modal-review"> 
+            <button type="button" data-modal-close class="review-modal-close modal-close"> 
+              <svg class="icon-close" width="20px" height="20px">
+                <use href="/src/images/symbol-defs.svg#icon-x"></use>
+              </svg>
+            </button>
+        
+            <p class="modal-title modal-title-review">leave a review about <span class="title-colored">our chocolate</span></p>
+      
+      <form class="modal-form modal-form-review form">
+         
+        <label class="modal-form-field">
+            <span class="modal-form-input-wrapper">
+              <input
+                class="modal-form-input form-input"
+                type="text"
+                name="name"
+                pattern="[a-zA-Zа-яА-Я]+"
+                required
+                minlength="2"
+                placeholder="Name"
+                >
+            </span>
+        </label>
+    
+        <label class="modal-form-field" for="email">
+            <span class="modal-form-input-wrapper">
+              <input
+                id="email"
+                class="modal-form-input form-input"
+                type="email"
+                name="email"
+                pattern="[A-Za-z0-9]"
+                placeholder="Enter your email"
+                required
+              >
+            </span>
+          </label>
+    
+          <label class="modal-form-field phone" for="phone">
+            <span class="modal-form-input-wrapper">
+                  <input
+                  class="modal-form-input form-input"
+                   type="number"
+                   name="phone" 
+                   id="phone"
+                   placeholder="Phone number"
+                   required >
+            </span>
+           </label>
+    
+           <label class="modal-form-field" for="comment">
+            <textarea 
+              name="comment"
+              id="comment"
+              rows="10"
+              class="modal-form-textarea form-input review-text"
+              placeholder="Enter text"></textarea>
+            </label>
+          
+       <button type="submit" class="form-button button review-send-btn">Send</button>
+        </form>
+      </div>
+    
+    </div>
+    
+    
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/modal-review.js"></script>
+    <script src="/src/js/modal-phone-areacode.js"></script>
+    <script src="/src/js/modal-buy.js"></script>
+
+
+</body>
