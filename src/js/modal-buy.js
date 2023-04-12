@@ -1,6 +1,6 @@
 
 var close = document.getElementsByClassName('close');
-var openModalBtn = document.getElementsByClassName('openingModal');
+var openBtn = document.getElementsByClassName('openingModal');
 Array.from(close, closeButton =>{
   closeButton.addEventListener('click',  e => e.target.parentNode.parentNode.style.diplay = 'none');
 });
