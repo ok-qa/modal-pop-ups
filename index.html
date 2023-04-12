@@ -4,7 +4,8 @@
     <meta charset="UTF-8" >
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Vanilla App Template</title>
+    <title>Modal</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" >
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link
@@ -28,17 +29,18 @@
   </head>
 
 <body>
-  <script src="./src/js/modal-buy.js"></script>
-  <script src="./src/js/modal-phone-areacode.js"></script>
+
 
     
 
-  <button type="button" data-id="modal-one" class="button openingModal">Buy Now</button>
-  <button type="button" data-id="modal-two" class="button openingModal">Leave a review</button>
+  <button data-modal="modal1" class="button modal-open">Buy Now</button>
+  <button data-modal="modal2" class="button modal-open">Leave a review</button>
+  <button data-modal="modal3" class="button modal-open">Subscribe</button>
    
  
 <load src="modal-popups.html" />
 
-
+<script src="./src/js/modal.js"></script>
+<script src="./src/js/modal-phone-areacode.js"></script>
 </body>
 </html>

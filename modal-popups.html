@@ -29,16 +29,19 @@
 <!-- <body> -->
 
 <!-- Modal Buy Now-->
-<div class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" data-modal id="modal1">
 
-<div class="modal modal-buy"> 
+  <div class="modal modal-buy modal-content" >
+  <div class="modal-header modal-title modal-title-buy"><span class="title-colored">buy</span> now
     <button type="button" data-modal-close class="buy-modal-close modal-close"> 
       <svg class="icon-close" width="20px" height="20px">
         <use href="/src/images/symbol-defs.svg#icon-x"></use>
       </svg>
     </button>
+  </div>
+    
 
-    <p class="modal-title modal-title-buy"><span class="title-colored">buy</span> now</p>
+    <div class="modal-body">
 
     <div class="buy-option-container">
       <ul class="buy-option-list">
@@ -188,7 +191,7 @@
         </span>
       </label>
     
-    </br>
+   
 
       <span class="modal-frm-inpt-desc inpt-desc">Comment</span>
       <label class="modal-form-field" for="comment">
@@ -199,18 +202,28 @@
             class="modal-form-textarea form-input review-form-input"
             placeholder="Enter text"></textarea>
           </label>
-      
-        <button type="submit" class="form-button button submit-btn">Submit</button>
+        </form>
+      </div>
 
-        <!-- <button class="modal-form-btn" type="submit">Send</button> -->
-      </form>
+      <div class="modal-footer">
+        <button type="submit" class="form-button button submit-btn modal-close link">Submit</button>
+      </div>
+        
     </div>
 
 </div>
 
     
+
+
+
+
+
+
+
+
     <!--Modal Leave a Review-->
-    <div id="modal-two" class="backdrop is-hidden" data-modal>
+    <div id="modal2" class="backdrop is-hidden" data-modal>
 
         <div class="modal modal-review"> 
             <button type="button" data-modal-close class="review-modal-close modal-close"> 
@@ -277,47 +290,11 @@
       </div>
     
     </div>
-    
-    <!-- <script type="text/javascript">
-        function showWindow1() {
-            var wnd = $("#modal-one").data("kendoWindow");
-            wnd.title("Window 1");
-            wnd.center();
-            wnd.open();
-        };
-    
-        function showWindow2() {
-            var wnd = $("#modal-two").data("kendoWindow");
-            wnd.title("Window 2");
-            wnd.center();
-            wnd.open();
-        };
-    
-        $("#window2").kendoWindow({
-            width: "500px",
-            height: "160px",
-            modal: true,
-            draggable: true,
-            resizable: false,
-            visible: false
-        });
-    
-        $("#window1").kendoWindow({
-            width: "500px",
-            height: "160px",
-            modal: true,
-            draggable: true,
-            resizable: false,
-            visible: false
-        });
-    </script>
-     -->
-
-    <!-- <script src="/src/js/main.js"></script> -->
-    <!-- <script src="/src/js/modal-review.js"></script> -->
-    <!-- <script src="/src/js/modal-buy.js"></script>
-    <script src="/src/js/modal-phone-areacode.js"></script> -->
-    
-
-
-<!-- </body> -->
+   
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <div class="modal-header">Modal 3</div>
+        <div class="modal-body">Lorem ipsum dolor sit amet consectetur!</div>
+        <div class="modal-footer"><button class="link modal-close"></button></div>
+      </div>
+    </div>
