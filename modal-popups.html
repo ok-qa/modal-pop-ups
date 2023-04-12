@@ -28,11 +28,11 @@
 
 <body>
 
-<button type="button" data-modal-buy-open class="button">Buy Now</button>
-<button type="button" data-modal-review-open class="button">Leave a review</button>
+<button type="button" data-id="modal-one" class="button openingModal">Buy Now</button>
+<button type="button" data-id="modal-two" class="button openingModal">Leave a review</button>
  
 <!-- Modal Buy Now-->
-<div id="modal-one" class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" data-modal>
 
 <div class="modal modal-buy"> 
     <button type="button" data-modal-close class="buy-modal-close modal-close"> 
@@ -44,59 +44,71 @@
     <p class="modal-title modal-title-buy"><span class="title-colored">buy</span> now</p>
 
     <div class="buy-option-container">
-    <ul class="buy-option-list">
+      <ul class="buy-option-list">
+        <li class="card buy-option-item">
+          <div class="buy-option">
+          <img class="buy-option-img"
+              srcset="/src/images/modal-img/dark-chocolate-mob-2x.jpg
+              480w, /src/images/modal-img/dark-chocolate-tab-2x.jpg
+              /src/images/modal-img/dark-chocolate.jpg"
+              sizes="(max-width: 1200px) 1x, 1,5x 2x"
+              src="/src/images/modal-img/dark-chocolate.jpg"
+              alt="Dark Chocolate" >
+          <!-- <div class="check-button" id="ck-button">
+            <label class="checkbox">
+               <input class="check-btn" type="checkbox" value="1"><span class="weight">100g</span>
+            </label> -->
+            <div class="form_radio_btn">
+              <input id="radio-1" type="radio" name="radio" value="1" checked>
+              <label for="radio-1">100g</label>
+            </div>
+         </div>
+  
+      </li>
+  
+       <li class="card buy-option-item">
+        <div class="buy-option">
+          <img class="buy-option-img"
+          srcset="/src/images/modal-img/white-chocolate-mob-2x.jpg
+          480w, /src/images/modal-img/white-chocolate-tab-2x.jpg
+          /src/images/modal-img/white-chocolate.jpg"
+          sizes="(max-width: 1200px) 1x, 1,5x 2x"
+          src="/src/images/modal-img/white-chocolate.jpg"
+          alt="White Chocolate" >
+          <!-- <div class="check-button" id="ck-button">
+            <label class="checkbox">
+               <input class="check-btn" type="checkbox" value="2"><span class="weight">200g</span>
+            </label>
+         </div> -->
+         <div class="form_radio_btn">
+          <input id="radio-2" type="radio" name="radio" value="2">
+          <label for="radio-2">200g</label>
+        </div>
+        </div>
+      </li>
+        
       <li class="card buy-option-item">
         <div class="buy-option">
-        <img class="buy-option-img"
-            srcset="/src/images/modal-img/dark-chocolate-mob-2x.jpg
-            480w, /src/images/modal-img/dark-chocolate-tab-2x.jpg
-            /src/images/modal-img/dark-chocolate.jpg"
-            sizes="(max-width: 1200px) 1x, 1,5x 2x"
-            src="/src/images/modal-img/dark-chocolate.jpg"
-            alt="Dark Chocolate" >
-        <div class="check-button" id="ck-button">
-          <label class="checkbox">
-             <input class="check-btn" type="checkbox" value="1"><span class="weight">100g</span>
-          </label>
-       </div>
-
-    </li>
-
-     <li class="card buy-option-item">
-      <div class="buy-option">
-        <img class="buy-option-img"
-        srcset="/src/images/modal-img/white-chocolate-mob-2x.jpg
-        480w, /src/images/modal-img/white-chocolate-tab-2x.jpg
-        /src/images/modal-img/white-chocolate.jpg"
-        sizes="(max-width: 1200px) 1x, 1,5x 2x"
-        src="/src/images/modal-img/white-chocolate.jpg"
-        alt="White Chocolate" >
-        <div class="check-button" id="ck-button">
-          <label class="checkbox">
-             <input class="check-btn" type="checkbox" value="2"><span class="weight">200g</span>
-          </label>
-       </div>
+          <img class="buy-option-img"
+          srcset="/src/images/modal-img/milk-chocolate-mob-2x.jpg
+          480w, /src/images/modal-img/milk-chocolate-tab-2x.jpg
+          /src/images/modal-img/milk-chocolate.jpg"
+          sizes="(max-width: 1200px) 1x, 1,5x 2x"
+          src="/src/images/modal-img/milk-chocolate.jpg"
+          alt="Milk Chocolate" >
+          <!-- <div class="check-button" id="ck-button">
+            <label class="checkbox">
+               <input class="check-btn" type="checkbox" value="3"><span class="weight">300g</span>
+            </label>
+         </div> -->
+         <div class="form_radio_btn">
+          <input id="radio-3" type="radio" name="radio" value="3">
+          <label for="radio-3">300g</label>
+        </div>
+        </div>
+      </li>
+      </ul>
       </div>
-    </li>
-      
-    <li class="card buy-option-item">
-      <div class="buy-option">
-        <img class="buy-option-img"
-        srcset="/src/images/modal-img/milk-chocolate-mob-2x.jpg
-        480w, /src/images/modal-img/milk-chocolate-tab-2x.jpg
-        /src/images/modal-img/milk-chocolate.jpg"
-        sizes="(max-width: 1200px) 1x, 1,5x 2x"
-        src="/src/images/modal-img/milk-chocolate.jpg"
-        alt="Milk Chocolate" >
-        <div class="check-button" id="ck-button">
-          <label class="checkbox">
-             <input class="check-btn" type="checkbox" value="3"><span class="weight">300g</span>
-          </label>
-       </div>
-      </div>
-    </li>
-    </ul>
-    </div>
 
     <form class="modal-form modal-form-buy form">
       <span class="modal-frm-inpt-desc modal-frm-name inpt-desc">Personal information</span> 
@@ -269,7 +281,7 @@
     
     </div>
     
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function showWindow1() {
             var wnd = $("#modal-one").data("kendoWindow");
             wnd.title("Window 1");
@@ -302,11 +314,11 @@
             visible: false
         });
     </script>
-    
+     -->
 
     <!-- <script src="/src/js/main.js"></script> -->
-    <!-- <script src="/src/js/modal-review.js"></script>
-    <script src="/src/js/modal-buy.js"></script> -->
+    <!-- <script src="/src/js/modal-review.js"></script> -->
+    <script src="/src/js/modal-buy.js"></script>
     <script src="/src/js/modal-phone-areacode.js"></script>
     
 
