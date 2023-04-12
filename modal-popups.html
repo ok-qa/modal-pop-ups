@@ -32,7 +32,7 @@
 <button type="button" data-modal-review-open class="button">Leave a review</button>
  
 <!-- Modal Buy Now-->
-<div class="backdrop is-hidden" data-modal>
+<div id="modal-one" class="backdrop is-hidden" data-modal>
 
 <div class="modal modal-buy"> 
     <button type="button" data-modal-close class="buy-modal-close modal-close"> 
@@ -201,7 +201,7 @@
 
     
     <!--Modal Leave a Review-->
-    <div class="backdrop is-hidden" data-modal>
+    <div id="modal-two" class="backdrop is-hidden" data-modal>
 
         <div class="modal modal-review"> 
             <button type="button" data-modal-close class="review-modal-close modal-close"> 
@@ -269,11 +269,46 @@
     
     </div>
     
+    <script type="text/javascript">
+        function showWindow1() {
+            var wnd = $("#modal-one").data("kendoWindow");
+            wnd.title("Window 1");
+            wnd.center();
+            wnd.open();
+        };
     
-    <script src="/src/js/main.js"></script>
-    <script src="/src/js/modal-review.js"></script>
+        function showWindow2() {
+            var wnd = $("#modal-two").data("kendoWindow");
+            wnd.title("Window 2");
+            wnd.center();
+            wnd.open();
+        };
+    
+        $("#window2").kendoWindow({
+            width: "500px",
+            height: "160px",
+            modal: true,
+            draggable: true,
+            resizable: false,
+            visible: false
+        });
+    
+        $("#window1").kendoWindow({
+            width: "500px",
+            height: "160px",
+            modal: true,
+            draggable: true,
+            resizable: false,
+            visible: false
+        });
+    </script>
+    
+
+    <!-- <script src="/src/js/main.js"></script> -->
+    <!-- <script src="/src/js/modal-review.js"></script>
+    <script src="/src/js/modal-buy.js"></script> -->
     <script src="/src/js/modal-phone-areacode.js"></script>
-    <script src="/src/js/modal-buy.js"></script>
+    
 
 
 </body>
